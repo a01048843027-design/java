@@ -47,6 +47,7 @@ public class OperationIf {
         s.close();
     }
 }
+
 // (2) switch 문을 이용하여 프로그램을 작성하라.
 
 package basic;
