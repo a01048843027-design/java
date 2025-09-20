@@ -15,7 +15,6 @@ public class Practice_03 {
         } while (n <= 0);
 
         for (int i = n; i > 0; i--) {
-            // 현재 행(i)의 숫자만큼 '*'를 출력합니다.
             for (int j = 0; j < i; j++) {
                 System.out.print("*");
             }
