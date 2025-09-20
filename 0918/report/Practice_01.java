@@ -1,48 +1,68 @@
-//1. 다음 프로그램에 대해 물음에 답하라
+// 1. 다음 프로그램에 대해 물음에 답하라.
 
-int sum = 0, i = 0;
-while (i < 100) {
-	sum = sum + i;
-	i += 2;
+int sum=0, i=1;
+while (true) {
+    if( i > 50)
+        break;
+    sum = sum + i;
+    i = i + 3;
 }
 System.out.println(sum);
 
-/*3-1-1. 무엇을 계산하는 코드이며 실행 결과 출력되는 내용은?
-= while문 안에서 2의 배수를 계속 합산해 가는 프로그램이며 i가 100이 되면 멈추고 2450이 출력된다.*/
 
-//3-1-2. 위의 코드를 mail() 메소드로 만들고 WhileTest 클래스로 완성하라
-public class WhileTest {
-	public static void main(String[] args) {
-		int sum = 0, i = 0;
-		while (i < 100) {
-			sum = sum + i;
-			i += 2;
-		}
-		System.out.println(sum);
-	}
-}
+public class Practice_01 {
 
-//3-1-3. for문을 이용하여 동일하게 실행되는 ForTest 클래스를 작성하라
+    /*
+     * (1) 무엇을 계산하는 코드인가? 실행 결과와 출력되는 내용은?
+     *
+     * - 계산 내용: 1부터 시작하여 3씩 증가하는 정수들을 50이 넘기 전까지 더하는 코드.
+     * (즉, 1 + 4 + 7 + ... + 49의 합계를 계산.)
+     * - 실행 결과 및 출력: 425
+     */
 
-public class ForTest {
-	public static void main(String[] args) {
-		int sum = 0;
-		for(int i=0; i<100; i+=2) {
-			sum = sum + i;
-		}
-		System.out.print(sum);
-	}
-}
+    // (2) 위의 코드를 main() 메소드로 만들고 WhileLoop 클래스로 완성하라.
+    static class WhileLoop {
+        public static void main(String[] args) {
+            int sum = 0, i = 1;
+            while (true) {
+                if (i > 50)
+                    break;
+                sum = sum + i;
+                i = i + 3;
+            }
+            System.out.println("WhileLoop 결과: " + sum);
+        }
+    }
 
-//3-1-4. do-while 문을 이용하여 동일하게 실행되는 DoWhileTest 클래스를 작성하라
+    // (3) for 문을 이용하여 동일하게 실행되는 ForLoop 클래스를 작성하라.
+    static class ForLoop {
+        public static void main(String[] args) {
+            int sum = 0;
+            for (int i = 1; i <= 50; i += 3) {
+                sum = sum + i;
+            }
+            System.out.println("ForLoop 결과: " + sum);
+        }
+    }
 
-public class DoWhileTest {
-	public static void main(String[] args) {
-		int sum = 0, i = 0;
-		do {
-			sum = sum + i;
-			i += 2;
-		} while (i<100);
-		System.out.print(sum);
-	}
+    // (4) do-while 문을 이용하여 동일하게 실행되는 DoWhileLoop 클래스를 작성하라.
+    static class DoWhileLoop {
+        public static void main(String[] args) {
+            int sum = 0;
+            int i = 1;
+            do {
+                sum = sum + i;
+                i = i + 3;
+            } while (i <= 50);
+            System.out.println("DoWhileLoop 결과: " + sum);
+        }
+    }
+
+    // 한번에 모든 클래스의 실행 결과를 확인하기 위한 main 메소드
+    public static void main(String[] args) {
+        System.out.println("--- 1번 문제 실행 결과 ---");
+        WhileLoop.main(args);
+        ForLoop.main(args);
+        DoWhileLoop.main(args);
+    }
 }
