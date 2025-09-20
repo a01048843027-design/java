@@ -52,7 +52,7 @@ public class Practice_02 {
         public static void main(String[] args) {
             int n[] = {1, -2, 6, 20, 5, 72, -16, 256};
             System.out.print("DoWhileLoopArray 결과: ");
-            if (n.length > 0) { // 배열이 비어있지 않을 때만 실행
+            if (n.length > 0) {
                 int i = 0;
                 do {
                     if (n[i] > 0 && n[i] % 4 == 0) {
@@ -65,7 +65,6 @@ public class Practice_02 {
         }
     }
 
-    // 한번에 모든 클래스의 실행 결과를 확인하기 위한 main 메소드
     public static void main(String[] args) {
         System.out.println("--- 2번 문제 실행 결과 ---");
         ForLoopArray.main(args);
