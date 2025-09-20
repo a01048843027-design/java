@@ -9,13 +9,11 @@ public class Practice_03 {
         Scanner scanner = new Scanner(System.in);
         int n;
 
-        // 양의 정수가 입력될 때까지 입력을 반복합니다.
         do {
             System.out.print("양의 정수 입력>>");
             n = scanner.nextInt();
         } while (n <= 0);
 
-        // 입력된 숫자 n부터 1까지 줄어드는 역순으로 반복합니다.
         for (int i = n; i > 0; i--) {
             // 현재 행(i)의 숫자만큼 '*'를 출력합니다.
             for (int j = 0; j < i; j++) {
