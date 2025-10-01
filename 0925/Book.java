@@ -2,8 +2,7 @@ public class Book {
     String title, author;
 
     public Book(String t) {
-        title = t;
-        author = "작가 미상";
+        this(t, "작가 미상");
     }
 
     public Book(String t, String a) {
