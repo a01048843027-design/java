@@ -1,5 +1,12 @@
 [학사 관리 시스템 실행 방법]
 
+학사 관리 프로그램 비밀번호
+교수용 id prof
+
+학생용 id S001 (S)는 대문자임)
+
+비밀번호 (공통) 1234
+
 1. 데이터베이스 설정 (필수!)
    - 동봉된 'haksa_db_dump.sql' 파일을 MySQL Workbench에서 Import 해주세요.
    - 또는 쿼리창에 내용을 복사해서 실행해 주세요.
@@ -11,4 +18,5 @@
      -> static final String PASSWORD = "여기에_비밀번호_입력";
 
 3. 실행
+
    - src/main/App.java (또는 LoginFrame.java)를 실행하면 됩니다.
